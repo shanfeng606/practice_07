@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>运动模块</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <style>
+       .box {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+        .btns{
+            width:100px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <div id="box" class="box"></div>
+    <button id="back-btn" class="btns">&lt;</button
+    ><button id="go-btn" class="btns">&gt;</button>
+
+
+    <script src="../js/jquery.js"></script>      
+    <script src="../js/move.js"></script> 
+
+    <script>
+        var $box=$('#box'),
+            $goBtn=$('#go-btn'),
+            $backBtn=$('#back-btn');
+
+        $box.move({
+            css3:true,
+            js:false
+
+        }); 
+        $goBtn.on('click',function () {
+            $box.move('to',100,50);
+        }); 
+
+        $backBtn.on('click',function () {
+            $box.move('to',0,50);
+        });   
+    </script>   
+</body>
+</html>
