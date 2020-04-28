@@ -27,7 +27,7 @@
     $('#cart').on('dropdown-show', function() {
         dropdown.loadOnce($(this), function($elem, data) {
             dropdown.buildCartItem($elem, data);
-            dropdown.updateCart($elem, data);
+            // dropdown.updateCart($elem, data);
         });
     }).dropdown({
 
